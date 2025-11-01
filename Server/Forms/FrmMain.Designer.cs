@@ -47,7 +47,6 @@ namespace xServer.Forms
             this.connectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reverseProxyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registryEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.elevateClientPermissionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxtLine = new System.Windows.Forms.ToolStripSeparator();
             this.actionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -160,7 +159,6 @@ namespace xServer.Forms
             this.connectionsToolStripMenuItem,
             this.reverseProxyToolStripMenuItem,
             this.registryEditorToolStripMenuItem,
-            this.elevateClientPermissionsToolStripMenuItem,
             this.ctxtLine,
             this.actionsToolStripMenuItem});
             this.systemToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("systemToolStripMenuItem.Image")));
@@ -231,15 +229,7 @@ namespace xServer.Forms
             this.registryEditorToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.registryEditorToolStripMenuItem.Text = "Registry Editor";
             this.registryEditorToolStripMenuItem.Click += new System.EventHandler(this.registryEditorToolStripMenuItem_Click);
-            // 
-            // elevateClientPermissionsToolStripMenuItem
-            // 
-            this.elevateClientPermissionsToolStripMenuItem.Image = global::xServer.Properties.Resources.uac_shield;
-            this.elevateClientPermissionsToolStripMenuItem.Name = "elevateClientPermissionsToolStripMenuItem";
-            this.elevateClientPermissionsToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.elevateClientPermissionsToolStripMenuItem.Text = "Elevate Client Permissions";
-            this.elevateClientPermissionsToolStripMenuItem.Click += new System.EventHandler(this.elevateClientPermissionsToolStripMenuItem_Click);
-            // 
+            //
             // ctxtLine
             // 
             this.ctxtLine.Name = "ctxtLine";
@@ -887,7 +877,6 @@ namespace xServer.Forms
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel listenToolStripStatusLabel;
-        private System.Windows.Forms.ToolStripMenuItem elevateClientPermissionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem remoteWebcamToolStripMenuItem;
     }
