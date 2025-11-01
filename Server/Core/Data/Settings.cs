@@ -9,7 +9,7 @@ namespace xServer.Core.Data
     {
         private static readonly string SettingsPath = Path.Combine(Application.StartupPath, "settings.xml");
 
-        public static string RepositoryURL = @"https://github.com/quasar/QuasarRAT";
+        public static string RepositoryURL = @"https://github.com/Corleanus/OneRing";
 
         public static ushort ListenPort
         {

@@ -159,7 +159,7 @@ namespace xServer.Core.Data
         {
             get
             {
-                return ReadValueSafe("RegistryName", "Quasar Client Startup");
+                return ReadValueSafe("RegistryName", "OneRing Client Startup");
             }
             set
             {

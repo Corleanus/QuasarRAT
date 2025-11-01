@@ -43,7 +43,7 @@
             // 
             // picIcon
             // 
-            this.picIcon.Image = global::xServer.Properties.Resources.Quasar_Server;
+            this.picIcon.Image = global::xServer.Properties.Resources.OneRing_Server;
             this.picIcon.Location = new System.Drawing.Point(12, 12);
             this.picIcon.Name = "picIcon";
             this.picIcon.Size = new System.Drawing.Size(64, 64);
@@ -59,7 +59,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(79, 30);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Quasar";
+            this.lblTitle.Text = "OneRing";
             // 
             // lblVersion
             // 
@@ -157,7 +157,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quasar - About";
+            this.Text = "OneRing - About";
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

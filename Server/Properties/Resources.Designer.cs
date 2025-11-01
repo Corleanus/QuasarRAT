@@ -283,9 +283,9 @@ namespace xServer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Quasar_Server {
+        internal static System.Drawing.Bitmap OneRing_Server {
             get {
-                object obj = ResourceManager.GetObject("Quasar_Server", resourceCulture);
+                object obj = ResourceManager.GetObject("OneRing_Server", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -451,15 +451,15 @@ namespace xServer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to     Quasar - Remote Administration Tool
+        ///   Looks up a localized string similar to     OneRing - Remote Administration Tool
         ///    Copyright (C) 2016 MaxX0r
         ///
-        ///    Quasar is free software: you can redistribute it and/or modify
+        ///    OneRing is free software: you can redistribute it and/or modify
         ///    it under the terms of the GNU General Public License as published by
         ///    the Free Software Foundation, either version 3 of the License, or
         ///    (at your option) any later version.
         ///
-        ///    Quasar is distributed in the hope that it will be useful,
+        ///    OneRing is distributed in the hope that it will be useful,
         ///    but WITHOUT ANY WARRANTY; without even the implied warranty of
         ///    MERCHANTABILITY or FITNESS FOR A PARTICULAR PUR [rest of string was truncated]&quot;;.
         /// </summary>

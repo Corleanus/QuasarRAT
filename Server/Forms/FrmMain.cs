@@ -18,7 +18,7 @@ namespace xServer.Forms
 {
     public partial class FrmMain : Form
     {
-        public QuasarServer ListenServer { get; set; }
+        public OneRingServer ListenServer { get; set; }
         public static FrmMain Instance { get; private set; }
 
         private const int STATUS_ID = 4;
@@ -63,9 +63,9 @@ namespace xServer.Forms
                 {
                     int selected = lstClients.SelectedItems.Count;
                     this.Text = (selected > 0)
-                        ? string.Format("Quasar - Connected: {0} [Selected: {1}]", ListenServer.ConnectedClients.Length,
+                        ? string.Format("OneRing - Connected: {0} [Selected: {1}]", ListenServer.ConnectedClients.Length,
                             selected)
-                        : string.Format("Quasar - Connected: {0}", ListenServer.ConnectedClients.Length);
+                        : string.Format("OneRing - Connected: {0}", ListenServer.ConnectedClients.Length);
                 });
             }
             catch (Exception)
@@ -76,7 +76,7 @@ namespace xServer.Forms
 
         private void InitializeServer()
         {
-            ListenServer = new QuasarServer();
+            ListenServer = new OneRingServer();
 
             ListenServer.ServerState += ServerState;
             ListenServer.ClientConnected += ClientConnected;
