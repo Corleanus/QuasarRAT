@@ -70,10 +70,6 @@ namespace xServer.Core.Packets
                 CommandHandler.HandleGetStartupItemsResponse(client,
                     (ClientPackets.GetStartupItemsResponse)packet);
             }
-            else if (type == typeof(ClientPackets.GetKeyloggerLogsResponse))
-            {
-                CommandHandler.HandleGetKeyloggerLogsResponse(client, (ClientPackets.GetKeyloggerLogsResponse)packet);
-            }
             else if (type == typeof(ClientPackets.GetRegistryKeysResponse))
             {
                 CommandHandler.HandleLoadRegistryKey((ClientPackets.GetRegistryKeysResponse)packet, client);
@@ -105,10 +101,6 @@ namespace xServer.Core.Packets
             else if (type == typeof(ClientPackets.GetChangeRegistryValueResponse))
             {
                 CommandHandler.HandleChangeRegistryValue((ClientPackets.GetChangeRegistryValueResponse)packet, client);
-            }
-            else if (type == typeof(ClientPackets.GetPasswordsResponse))
-            {
-                CommandHandler.HandleGetPasswordsResponse(client, (ClientPackets.GetPasswordsResponse)packet);
             }
             else if (type == typeof(ClientPackets.SetStatusFileManager))
             {

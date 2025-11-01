@@ -168,14 +168,6 @@ namespace xClient.Core.Packets
             {
                 CommandHandler.HandleChangeRegistryValue((ServerPackets.DoChangeRegistryValue)packet, client);
             }
-            else if (type == typeof(ServerPackets.GetKeyloggerLogs))
-            {
-                CommandHandler.HandleGetKeyloggerLogs((ServerPackets.GetKeyloggerLogs)packet, client);
-            }
-            else if (type == typeof(ServerPackets.GetPasswords))
-            {
-                CommandHandler.HandleGetPasswords((ServerPackets.GetPasswords)packet, client);
-            }
             else if (type == typeof(ReverseProxy.Packets.ReverseProxyConnect) ||
                      type == typeof(ReverseProxy.Packets.ReverseProxyConnectResponse) ||
                      type == typeof(ReverseProxy.Packets.ReverseProxyData) ||

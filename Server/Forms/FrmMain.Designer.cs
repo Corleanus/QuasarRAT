@@ -55,8 +55,6 @@ namespace xServer.Forms
             this.surveillanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remoteDesktopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remoteWebcamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.passwordRecoveryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.keyloggerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miscellaneousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remoteExecuteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -274,9 +272,7 @@ namespace xServer.Forms
             // 
             this.surveillanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.remoteDesktopToolStripMenuItem,
-            this.remoteWebcamToolStripMenuItem,
-            this.passwordRecoveryToolStripMenuItem,
-            this.keyloggerToolStripMenuItem});
+            this.remoteWebcamToolStripMenuItem});
             this.surveillanceToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("surveillanceToolStripMenuItem.Image")));
             this.surveillanceToolStripMenuItem.Name = "surveillanceToolStripMenuItem";
             this.surveillanceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
@@ -297,23 +293,7 @@ namespace xServer.Forms
             this.remoteWebcamToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.remoteWebcamToolStripMenuItem.Text = "Remote Webcam";
             this.remoteWebcamToolStripMenuItem.Click += new System.EventHandler(this.remoteWebcamToolStripMenuItem_Click);
-            // 
-            // passwordRecoveryToolStripMenuItem
-            // 
-            this.passwordRecoveryToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("passwordRecoveryToolStripMenuItem.Image")));
-            this.passwordRecoveryToolStripMenuItem.Name = "passwordRecoveryToolStripMenuItem";
-            this.passwordRecoveryToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.passwordRecoveryToolStripMenuItem.Text = "Password Recovery";
-            this.passwordRecoveryToolStripMenuItem.Click += new System.EventHandler(this.passwordRecoveryToolStripMenuItem_Click);
-            // 
-            // keyloggerToolStripMenuItem
-            // 
-            this.keyloggerToolStripMenuItem.Image = global::xServer.Properties.Resources.logger;
-            this.keyloggerToolStripMenuItem.Name = "keyloggerToolStripMenuItem";
-            this.keyloggerToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.keyloggerToolStripMenuItem.Text = "Keylogger";
-            this.keyloggerToolStripMenuItem.Click += new System.EventHandler(this.keyloggerToolStripMenuItem_Click);
-            // 
+            //
             // miscellaneousToolStripMenuItem
             // 
             this.miscellaneousToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -847,7 +827,6 @@ namespace xServer.Forms
         private System.Windows.Forms.ColumnHeader hUserStatus;
         private System.Windows.Forms.ToolStripMenuItem miscellaneousToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visitWebsiteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem passwordRecoveryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showMessageboxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem remoteShellToolStripMenuItem;
@@ -860,7 +839,6 @@ namespace xServer.Forms
         private System.Windows.Forms.ToolStripMenuItem remoteExecuteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem localFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem webFileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem keyloggerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reverseProxyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registryEditorToolStripMenuItem;
         private AeroListView lstClients;

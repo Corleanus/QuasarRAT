@@ -697,34 +697,6 @@ namespace xServer.Forms
                 frmWebcam.Show();
             }
         }
-        private void passwordRecoveryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Client c in GetSelectedClients())
-            {
-                if (c.Value.FrmPass != null)
-                {
-                    c.Value.FrmPass.Focus();
-                    return;
-                }
-
-                FrmPasswordRecovery frmPass = new FrmPasswordRecovery(GetSelectedClients());
-                frmPass.Show();
-            }
-        }
-
-        private void keyloggerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Client c in GetSelectedClients())
-            {
-                if (c.Value.FrmKl != null)
-                {
-                    c.Value.FrmKl.Focus();
-                    return;
-                }
-                FrmKeylogger frmKL = new FrmKeylogger(c);
-                frmKL.Show();
-            }
-        }
 
         #endregion
 
